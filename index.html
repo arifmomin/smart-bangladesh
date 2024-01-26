@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্মার্ট নাগরিক</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responesive.css">
+</head>
+<!-- =======created by Arif Momin======== -->
+<body>
+    <!-- ===========================modal part start========================== -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">ইউনিয়ন নির্বাচন করুন</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <select name="division" id="division" class="form-control">
+                                <option value="">বিভাগ নির্বাচন করুন</option>
+                                <option value="1">চট্টগ্রাম</option>
+                                <option value="2">রাজশাহী</option>
+                                <option value="3">খুলনা</option>
+                                <option value="4">বরিশাল</option>
+                                <option value="5">সিলেট</option>
+                                <option value="6">ঢাকা</option>
+                                <option value="7">রংপুর</option>
+                                <option value="8">ময়মনসিংহ</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select name="district" id="district" class="form-control">
+                                <option value="">জেলা নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select name="thana" id="thana" class="form-control">
+                                <option value="">উপজেলা নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="unioun" class="form-control">
+                                <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success">আবেদন করুন</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------modal part end---------------------------- -->
+    <!-- ===========================container================================ -->
+    <div class="container">
+        <!-- ---------------------------container--------------------------------- -->
+        <!-- =================================menuu bar start=============================== -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu_bar">
+            <div class="nav_bar_button_row">
+                <a class="navbar-brand" href="#"><img src="image/logo.png" alt="logo">
+                </a>
+                <div class="button_col">
+                    <a class="menu_button" href="#"> <span><i class="fa-solid fa-circle-left"></i></span>লগইন করুন</a>
+                    <a class="menu_button" href="#"><span><i class="fa-solid fa-plus"></i></span>প্রশাসনিক একাউন্ট
+                        নিবন্ধন</a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav menu_list me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">প্রথম পাতা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">নাগরিক সেবা সমূহ <span><i
+                                    class="fa-solid fa-angle-down"></i></span></a>
+                        <ul class="hover_list">
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">ট্রেড লাইসেন্স সনদের আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">ওয়ারিশ সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">নাগরিক সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">চারিত্রিক সনদের আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">মৃত্যু সনদের আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">একই নামের প্রত্যয় আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">বার্ষিক আয়ের প্রত্যয়ন আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">পারিবারিক সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">অবিবাহিত সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">পুনঃ বিবাহ না হওয়া সনদের আবেদন</a>
+                            </li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">প্রতিবন্দী সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">অনাপত্তি পাত্রের আবেদন </a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">প্রত্যয়নপত্র</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">ভোটার এলাকা স্থানান্তর অনাপত্তি
+                                    পত্র</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">অবকাঠামো নির্মাণের অনুমতি পত্র</a>
+                            </li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">ভূমিহীন সনদের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">অনুমতি পত্রের আবেদন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">জাতীয় পরিচয়পত্র সংশোধণ প্রত্যয়ন</a>
+                            </li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">ভোটার তালিকায় নাম অন্তরভূক্ত না হওয়া
+                                    প্রত্যয়ন</a></li>
+                            <li class="hover_item"><a class="hover_link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">নিঃ সন্তান প্রত্যয়ন</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">আবেদনের অবস্থা জানুন</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">সনদ যাচাই করুন</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">হোল্ডিং ট্যাক্স যাচাই</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">পৌর পানির বিল</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">ব্যবহার নির্দেশিকা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">যোগাযোগ</a>
+                    </li>
+                </ul>
+            </div>
+            <marquee behavior="scroll" direction="left">ডিজিটাল ক্যাশলেস সেবা সিস্টেমে আপনাকে স্বাগতম। যেকোন সমস্যা
+                সমাধানের জন্য নিম্ন বর্নিত এডমিনদের সাথে যোগাযোগের জন্য অনুরোধ করা হল - ( 01826204085, 01839700800,
+                01894747576 ) ।</marquee>
+
+        </nav>
+
+        <!-- --------------------------------menuu bar end-------------------------------- -->
+        <!-- =================================banner part start=============================== -->
+        <section id="banner">
+            <div class="banner_img">
+                <img src="image/banner_img.png" class="image-fluid w-100" alt="banner_img">
+            </div>
+        </section>
+        <!-- --------------------------------banner part end-------------------------------- -->
+        <!-- =================================service part start=============================== -->
+        <section id="service">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="service_heading">
+                        <h2>আমাদের সেবাসমূহ</h2>
+                    </div>
+                    <div class="service_row">
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 1 .png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>ট্রেড লাইসেন্স সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 2,3 ,8.png" class=" service_img image-fluid w-100"
+                                alt="service_img">
+                            <h2>ওয়ারিশ সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 2,3 ,8.png" class=" service_img image-fluid w-100"
+                                alt="service_img">
+                            <h2>নাগরিক সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 4.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>চারিত্রিক সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 5.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>মৃত্যু সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 6.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>একই নামের প্রত্যয় আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 7.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>বার্ষিক আয়ের প্রত্যয়ন আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 2,3 ,8.png" class=" service_img image-fluid w-100"
+                                alt="service_img">
+                            <h2>পারিবারিক সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 9.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>অবিবাহিত সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 10.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>পুনঃ বিবাহ না হওয়া সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 11.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>প্রতিবন্দী সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 12.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>অনাপত্তি পাত্রের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 13.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>প্রত্যয়নপত্র</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 14.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>ভোটার এলাকা স্থানান্তর অনাপত্তি</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 15.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>অবকাঠামো নির্মাণের অনুমতি পত্র</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 16.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>অবকাঠামো নির্মাণের অনুমতি পত্র</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 17.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>ভূমিহীন সনদের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 18.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>অনুমতি পত্রের আবেদন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 19.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>জাতীয় পরিচয়পত্র সংশোধণ প্রত্যয়ন</h2>
+                        </a>
+                        <a class="service_col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="image/service 20.png" class=" service_img image-fluid w-100" alt="service_img">
+                            <h2>নিঃ সন্তান প্রত্যয়ন</h2>
+                        </a>
+                    </div>
+                    <div class="service_text">
+                        <h3>টিউটোরিয়াল</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------service part end-------------------------------- -->
+        <!-- =================================facilities part start=============================== -->
+        <section id="facilities">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="facilities_video">
+                        <iframe width="400" height="150" src="https://www.youtube.com/embed/WEaPdsZIQEY">
+
+                        </iframe>
+                        <h2>ডিজিটাল ই-সেবায় আপনার প্রশাসনিক একাউন্ট নিবন্ধন করুন</h2>
+                    </div>
+                    <div class="facilities_heading">
+                        <h3>আমাদের সুবিধা সমুহ</h3>
+                    </div>
+                    <div class="facilites_row">
+                        <div class="facilites_col">
+                            <div class="facilites_img">
+                                <img src="image/facilites item (4).png" class="image-fluid w-100" alt="facilites img">
+                            </div>
+                            <div class="facilites_text">
+                                <h3>যেকোনো স্থান থেকে নাগরিক সকল সেবা (মোবাইলে) গ্রহন</h3>
+                            </div>
+                        </div>
+                        <div class="facilites_col">
+                            <div class="facilites_img">
+                                <img src="image/facilites item (3).png" class="image-fluid w-100" alt="facilites img">
+                            </div>
+                            <div class="facilites_text">
+                                <h3>e-KYC ভিত্তিক সনদ ব্যবস্থাপনা সিষ্টেম </h3>
+                            </div>
+                        </div>
+                        <div class="facilites_col">
+                            <div class="facilites_img">
+                                <img src="image/facilites item (5).png" class="image-fluid w-100" alt="facilites img">
+                            </div>
+                            <div class="facilites_text">
+                                <h3>সহজে হোল্ডিং ট্যাক্স / পৌর পানির বিল কালেশন সুবিধা</h3>
+                            </div>
+                        </div>
+                        <div class="facilites_col">
+                            <div class="facilites_img">
+                                <img src="image/facilites item (1).png" class="image-fluid w-100" alt="facilites img">
+                            </div>
+                            <div class="facilites_text">
+                                <h3>( EKPAY ) পেমেন্ট গেটওয়ে এর মাধ্যমে সকল বিল কালেকশনের সুযোগ</h3>
+                            </div>
+                        </div>
+                        <div class="facilites_col">
+                            <div class="facilites_img">
+                                <img src="image/facilites item (2).png" class="image-fluid w-100" alt="facilites img">
+                            </div>
+                            <div class="facilites_text">
+                                <h3>( Porichoy ) জাতীয় পরিচয়পত্র যাচাই এর মাধ্যমে সকল নাগরিক সেবা প্রদান</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------facilities part end-------------------------------- -->
+        <!-- =================================footer part start=============================== -->
+        <section id="footer">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer_row">
+                        <div class="footer_col">
+                            <div class="footer_heading">
+                                <h2>বিবিধ</h2>
+                                <ul class="footer_list">
+                                    <li class="footer_item"><a class="footer_link" href="#">সনদ আবেদনের সর্বশেষ
+                                            অবস্থা</a></li>
+                                    <li class="footer_item"><a class="footer_link"
+                                            href="https://smartnagorik.com.bd/holding-tax">হোল্ডিং ট্যাক্স যাচাই
+                                            করুন</a></li>
+                                    <li class="footer_item"><a class="footer_link" href="#">ডিজিটাল ই-সেবা সম্পর্কে</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_col">
+                            <div class="footer_heading">
+                                <h2>সোশ্যাল মিডিয়া</h2>
+                                <ul class="footer_list">
+                                    <li class="footer_item"><a class="footer_link"
+                                            href="https://www.facebook.com/digitalupseba">ফেইসবুক</a></li>
+                                    <li class="footer_item"><a class="footer_link"
+                                            href="https://chat.whatsapp.com/EzDnoqMNhoqHIcJDaT99Rb?fbclid=IwAR0CjiHgVX6wBwtW2xvM98GKat_cloGw5_YSIZ0QUW7rkd3ICgJBwyq-n3Q">হোয়াটসঅ্যাপ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_col">
+                            <div class="footer_heading">
+                                <h2>যোগাযোগ</h2>
+                                <ul class="footer_list">
+                                    <li class="footer_item"><a class="footer_link"
+                                            href="mailto:">info@smartnagorik.com.bd</a></li>
+                                    <li class="footer_item"><a class="footer_link" href="tel:">01826204085</a></li>
+                                    <li class="footer_item"><a class="footer_link" href="tel:">01839700800</a></li>
+                                    <li class="footer_item"><a class="footer_link" href="tel:">01894747576</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                    </div>
+                    <div class="copyright_col">
+                        <div class="copyright_heading">
+                            <h3>কপিরাইট © ২০২১-২০২৩ সর্বস্বত্ব সংরক্ষিত</h3>
+                            <p>ডিজিটাল ই-সেবা</p>
+                        </div>
+                        <div class="copyright_img">
+                            <img src="image/logo.png" class="image-fluid w-100" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- =======================js link start========================= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- -----------------------js link end---------------------------- -->
+</body>
+</html>
